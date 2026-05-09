@@ -1,0 +1,256 @@
+package cn.smssdk.gui;
+
+/* JADX INFO: renamed from: cn.smssdk.gui.R */
+/* JADX INFO: loaded from: classes.dex */
+public final class C0965R {
+
+    /* JADX INFO: renamed from: cn.smssdk.gui.R$array */
+    public static final class array {
+        public static final int smssdk_country_group_a = 2130903092;
+        public static final int smssdk_country_group_b = 2130903093;
+        public static final int smssdk_country_group_c = 2130903094;
+        public static final int smssdk_country_group_d = 2130903095;
+        public static final int smssdk_country_group_e = 2130903096;
+        public static final int smssdk_country_group_f = 2130903097;
+        public static final int smssdk_country_group_g = 2130903098;
+        public static final int smssdk_country_group_h = 2130903099;
+        public static final int smssdk_country_group_i = 2130903100;
+        public static final int smssdk_country_group_j = 2130903101;
+        public static final int smssdk_country_group_k = 2130903102;
+        public static final int smssdk_country_group_l = 2130903103;
+        public static final int smssdk_country_group_m = 2130903104;
+        public static final int smssdk_country_group_n = 2130903105;
+        public static final int smssdk_country_group_o = 2130903106;
+        public static final int smssdk_country_group_p = 2130903107;
+        public static final int smssdk_country_group_q = 2130903108;
+        public static final int smssdk_country_group_r = 2130903109;
+        public static final int smssdk_country_group_s = 2130903110;
+        public static final int smssdk_country_group_t = 2130903111;
+        public static final int smssdk_country_group_u = 2130903112;
+        public static final int smssdk_country_group_v = 2130903113;
+        public static final int smssdk_country_group_w = 2130903114;
+        public static final int smssdk_country_group_x = 2130903115;
+        public static final int smssdk_country_group_y = 2130903116;
+        public static final int smssdk_country_group_z = 2130903117;
+    }
+
+    /* JADX INFO: renamed from: cn.smssdk.gui.R$color */
+    public static final class color {
+        public static final int smssdk_black = 2131099835;
+        public static final int smssdk_gray = 2131099836;
+        public static final int smssdk_gray_press = 2131099837;
+        public static final int smssdk_lv_item_divider = 2131099838;
+        public static final int smssdk_lv_item_selector = 2131099839;
+        public static final int smssdk_lv_title_color = 2131099840;
+        public static final int smssdk_lv_tv_color = 2131099841;
+        public static final int smssdk_transparent = 2131099842;
+        public static final int smssdk_white = 2131099843;
+    }
+
+    /* JADX INFO: renamed from: cn.smssdk.gui.R$drawable */
+    public static final class drawable {
+        public static final int smssdk_back_arrow = 2131231314;
+        public static final int smssdk_back_arrow2 = 2131231315;
+        public static final int smssdk_btn_disenable = 2131231316;
+        public static final int smssdk_btn_enable = 2131231317;
+        public static final int smssdk_cl_divider = 2131231318;
+        public static final int smssdk_clear_search = 2131231319;
+        public static final int smssdk_corners_bg = 2131231320;
+        public static final int smssdk_corners_bg_nor = 2131231321;
+        public static final int smssdk_corners_bg_pre = 2131231322;
+        public static final int smssdk_country_bg_selector = 2131231323;
+        public static final int smssdk_country_group_scroll_down = 2131231324;
+        public static final int smssdk_country_group_scroll_up = 2131231325;
+        public static final int smssdk_cp_default_avatar = 2131231326;
+        public static final int smssdk_default_avatar = 2131231327;
+        public static final int smssdk_dialog_back = 2131231328;
+        public static final int smssdk_dialog_bg = 2131231329;
+        public static final int smssdk_dialog_btn_back = 2131231330;
+        public static final int smssdk_dialog_btn_nor = 2131231331;
+        public static final int smssdk_dialog_btn_pre = 2131231332;
+        public static final int smssdk_edittext_bg_selector = 2131231333;
+        public static final int smssdk_input_bg_focus = 2131231334;
+        public static final int smssdk_input_bg_normal = 2131231335;
+        public static final int smssdk_input_bg_special_focus = 2131231336;
+        public static final int smssdk_input_bg_special_normal = 2131231337;
+        public static final int smssdk_search_icon = 2131231338;
+        public static final int smssdk_sharesdk_icon = 2131231339;
+    }
+
+    /* JADX INFO: renamed from: cn.smssdk.gui.R$raw */
+    public static final class raw {
+        public static final int smssdk_pydb = 2131558746;
+    }
+
+    /* JADX INFO: renamed from: cn.smssdk.gui.R$string */
+    public static final class string {
+        public static final int smssdk_add_contact = 2131624513;
+        public static final int smssdk_back = 2131624514;
+        public static final int smssdk_cancel = 2131624515;
+        public static final int smssdk_choice_invite_phones = 2131624516;
+        public static final int smssdk_choose_country = 2131624517;
+        public static final int smssdk_close_identify_page_dialog = 2131624518;
+        public static final int smssdk_contacts_detail = 2131624519;
+        public static final int smssdk_contacts_in_app = 2131624520;
+        public static final int smssdk_contacts_out_app = 2131624521;
+        public static final int smssdk_contacts_phones = 2131624522;
+        public static final int smssdk_country = 2131624523;
+        public static final int smssdk_country_not_support_currently = 2131624524;
+        public static final int smssdk_error_desc_400 = 2131624525;
+        public static final int smssdk_error_desc_401 = 2131624526;
+        public static final int smssdk_error_desc_402 = 2131624527;
+        public static final int smssdk_error_desc_403 = 2131624528;
+        public static final int smssdk_error_desc_404 = 2131624529;
+        public static final int smssdk_error_desc_405 = 2131624530;
+        public static final int smssdk_error_desc_406 = 2131624531;
+        public static final int smssdk_error_desc_407 = 2131624532;
+        public static final int smssdk_error_desc_408 = 2131624533;
+        public static final int smssdk_error_desc_418 = 2131624534;
+        public static final int smssdk_error_desc_419 = 2131624535;
+        public static final int smssdk_error_desc_450 = 2131624536;
+        public static final int smssdk_error_desc_451 = 2131624537;
+        public static final int smssdk_error_desc_452 = 2131624538;
+        public static final int smssdk_error_desc_453 = 2131624539;
+        public static final int smssdk_error_desc_454 = 2131624540;
+        public static final int smssdk_error_desc_455 = 2131624541;
+        public static final int smssdk_error_desc_456 = 2131624542;
+        public static final int smssdk_error_desc_457 = 2131624543;
+        public static final int smssdk_error_desc_458 = 2131624544;
+        public static final int smssdk_error_desc_459 = 2131624545;
+        public static final int smssdk_error_desc_460 = 2131624546;
+        public static final int smssdk_error_desc_461 = 2131624547;
+        public static final int smssdk_error_desc_462 = 2131624548;
+        public static final int smssdk_error_desc_463 = 2131624549;
+        public static final int smssdk_error_desc_464 = 2131624550;
+        public static final int smssdk_error_desc_465 = 2131624551;
+        public static final int smssdk_error_desc_466 = 2131624552;
+        public static final int smssdk_error_desc_467 = 2131624553;
+        public static final int smssdk_error_desc_468 = 2131624554;
+        public static final int smssdk_error_desc_469 = 2131624555;
+        public static final int smssdk_error_desc_470 = 2131624556;
+        public static final int smssdk_error_desc_471 = 2131624557;
+        public static final int smssdk_error_desc_472 = 2131624558;
+        public static final int smssdk_error_desc_473 = 2131624559;
+        public static final int smssdk_error_desc_474 = 2131624560;
+        public static final int smssdk_error_desc_475 = 2131624561;
+        public static final int smssdk_error_desc_476 = 2131624562;
+        public static final int smssdk_error_desc_477 = 2131624563;
+        public static final int smssdk_error_desc_478 = 2131624564;
+        public static final int smssdk_error_desc_500 = 2131624565;
+        public static final int smssdk_error_desc_501 = 2131624566;
+        public static final int smssdk_error_desc_502 = 2131624567;
+        public static final int smssdk_error_desc_503 = 2131624568;
+        public static final int smssdk_error_desc_504 = 2131624569;
+        public static final int smssdk_error_desc_505 = 2131624570;
+        public static final int smssdk_error_desc_506 = 2131624571;
+        public static final int smssdk_error_desc_507 = 2131624572;
+        public static final int smssdk_error_desc_508 = 2131624573;
+        public static final int smssdk_error_desc_510 = 2131624574;
+        public static final int smssdk_error_desc_511 = 2131624575;
+        public static final int smssdk_error_desc_600 = 2131624576;
+        public static final int smssdk_error_desc_601 = 2131624577;
+        public static final int smssdk_error_desc_602 = 2131624578;
+        public static final int smssdk_error_desc_603 = 2131624579;
+        public static final int smssdk_error_desc_604 = 2131624580;
+        public static final int smssdk_error_desc_605 = 2131624581;
+        public static final int smssdk_error_desc_server_busy = 2131624582;
+        public static final int smssdk_error_detail_400 = 2131624583;
+        public static final int smssdk_error_detail_401 = 2131624584;
+        public static final int smssdk_error_detail_402 = 2131624585;
+        public static final int smssdk_error_detail_403 = 2131624586;
+        public static final int smssdk_error_detail_404 = 2131624587;
+        public static final int smssdk_error_detail_405 = 2131624588;
+        public static final int smssdk_error_detail_406 = 2131624589;
+        public static final int smssdk_error_detail_407 = 2131624590;
+        public static final int smssdk_error_detail_408 = 2131624591;
+        public static final int smssdk_error_detail_418 = 2131624592;
+        public static final int smssdk_error_detail_419 = 2131624593;
+        public static final int smssdk_error_detail_450 = 2131624594;
+        public static final int smssdk_error_detail_451 = 2131624595;
+        public static final int smssdk_error_detail_452 = 2131624596;
+        public static final int smssdk_error_detail_453 = 2131624597;
+        public static final int smssdk_error_detail_454 = 2131624598;
+        public static final int smssdk_error_detail_455 = 2131624599;
+        public static final int smssdk_error_detail_456 = 2131624600;
+        public static final int smssdk_error_detail_457 = 2131624601;
+        public static final int smssdk_error_detail_458 = 2131624602;
+        public static final int smssdk_error_detail_459 = 2131624603;
+        public static final int smssdk_error_detail_460 = 2131624604;
+        public static final int smssdk_error_detail_461 = 2131624605;
+        public static final int smssdk_error_detail_462 = 2131624606;
+        public static final int smssdk_error_detail_463 = 2131624607;
+        public static final int smssdk_error_detail_464 = 2131624608;
+        public static final int smssdk_error_detail_465 = 2131624609;
+        public static final int smssdk_error_detail_466 = 2131624610;
+        public static final int smssdk_error_detail_467 = 2131624611;
+        public static final int smssdk_error_detail_468 = 2131624612;
+        public static final int smssdk_error_detail_469 = 2131624613;
+        public static final int smssdk_error_detail_470 = 2131624614;
+        public static final int smssdk_error_detail_471 = 2131624615;
+        public static final int smssdk_error_detail_472 = 2131624616;
+        public static final int smssdk_error_detail_473 = 2131624617;
+        public static final int smssdk_error_detail_474 = 2131624618;
+        public static final int smssdk_error_detail_475 = 2131624619;
+        public static final int smssdk_error_detail_476 = 2131624620;
+        public static final int smssdk_error_detail_477 = 2131624621;
+        public static final int smssdk_error_detail_478 = 2131624622;
+        public static final int smssdk_error_detail_500 = 2131624623;
+        public static final int smssdk_error_detail_501 = 2131624624;
+        public static final int smssdk_error_detail_502 = 2131624625;
+        public static final int smssdk_error_detail_503 = 2131624626;
+        public static final int smssdk_error_detail_504 = 2131624627;
+        public static final int smssdk_error_detail_505 = 2131624628;
+        public static final int smssdk_error_detail_506 = 2131624629;
+        public static final int smssdk_error_detail_507 = 2131624630;
+        public static final int smssdk_error_detail_508 = 2131624631;
+        public static final int smssdk_error_detail_510 = 2131624632;
+        public static final int smssdk_error_detail_511 = 2131624633;
+        public static final int smssdk_error_detail_600 = 2131624634;
+        public static final int smssdk_error_detail_601 = 2131624635;
+        public static final int smssdk_error_detail_602 = 2131624636;
+        public static final int smssdk_error_detail_603 = 2131624637;
+        public static final int smssdk_error_detail_604 = 2131624638;
+        public static final int smssdk_error_detail_605 = 2131624639;
+        public static final int smssdk_get_phone_verifycode_today_frequentlly = 2131624640;
+        public static final int smssdk_get_verifycode_frequentlly = 2131624641;
+        public static final int smssdk_identify_code = 2131624642;
+        public static final int smssdk_invite = 2131624643;
+        public static final int smssdk_invite_content = 2131624644;
+        public static final int smssdk_make_sure_country_mobile = 2131624645;
+        public static final int smssdk_make_sure_mobile_detail = 2131624646;
+        public static final int smssdk_make_sure_mobile_num = 2131624647;
+        public static final int smssdk_make_sure_send_sounds = 2131624648;
+        public static final int smssdk_network_error = 2131624649;
+        public static final int smssdk_next = 2131624650;
+        public static final int smssdk_not_invite = 2131624651;
+        public static final int smssdk_ok = 2131624652;
+        public static final int smssdk_receive_msg = 2131624653;
+        public static final int smssdk_regist = 2131624654;
+        public static final int smssdk_resend_identify_code = 2131624655;
+        public static final int smssdk_search = 2131624656;
+        public static final int smssdk_search_contact = 2131624657;
+        public static final int smssdk_send_invitation = 2131624658;
+        public static final int smssdk_send_mobile_detail = 2131624659;
+        public static final int smssdk_send_sounds = 2131624660;
+        public static final int smssdk_send_sounds_identify_code = 2131624661;
+        public static final int smssdk_send_sounds_success = 2131624662;
+        public static final int smssdk_smart_verify_already = 2131624663;
+        public static final int smssdk_smart_verify_tips = 2131624664;
+        public static final int smssdk_submit = 2131624665;
+        public static final int smssdk_unreceive_identify_code = 2131624666;
+        public static final int smssdk_user_info_submited = 2131624667;
+        public static final int smssdk_virificaition_code_sent = 2131624668;
+        public static final int smssdk_virificaition_code_wrong = 2131624669;
+        public static final int smssdk_wait = 2131624670;
+        public static final int smssdk_write_identify_code = 2131624671;
+        public static final int smssdk_write_mobile_phone = 2131624672;
+        public static final int smssdk_write_right_mobile_phone = 2131624673;
+        public static final int smssdk_your_ccount_is_verified = 2131624674;
+    }
+
+    /* JADX INFO: renamed from: cn.smssdk.gui.R$style */
+    public static final class style {
+        public static final int AppTheme = 2131689479;
+        public static final int CommonDialog = 2131689673;
+    }
+}

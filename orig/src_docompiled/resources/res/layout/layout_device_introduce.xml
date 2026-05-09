@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:id="@+id/ll_introduce_sport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+        <TextView
+            android:textSize="16sp"
+            android:textColor="@color/white_menu_bg"
+            android:gravity="center_vertical"
+            android:background="@drawable/ic_sport_welcome_title"
+            android:paddingLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/welcom"/>
+        <TextView
+            android:textSize="11sp"
+            android:textColor="@color/text_menu_checked"
+            android:id="@+id/fragment_sport_tv_app_explain"
+            android:background="@drawable/ic_sport_welcome_explain"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_explain"
+            android:lineSpacingMultiplier="1.2"/>
+    </LinearLayout>
+</LinearLayout>

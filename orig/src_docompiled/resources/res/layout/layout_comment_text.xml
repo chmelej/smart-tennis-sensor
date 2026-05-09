@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/tv_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="4"/>
+    <TextView
+        android:textColor="#25c9ad"
+        android:layout_gravity="end|bottom"
+        android:id="@+id/tv_extent"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="全文"/>
+</FrameLayout>

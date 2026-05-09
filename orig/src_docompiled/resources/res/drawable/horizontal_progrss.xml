@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background">
+        <shape>
+            <corners android:radius="3dp"/>
+            <solid android:color="@color/text_menu_checked"/>
+        </shape>
+    </item>
+    <item android:id="@android:id/secondaryProgress">
+        <clip>
+            <shape>
+                <gradient
+                    android:startColor="@color/changci_num"
+                    android:endColor="@color/changci_num"
+                    android:angle="90"
+                    android:centerY="0.45"
+                    android:centerColor="@color/changci_num"/>
+            </shape>
+        </clip>
+    </item>
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <corners android:radius="3dp"/>
+                <solid android:color="@color/sport_text_number"/>
+            </shape>
+        </clip>
+    </item>
+</layer-list>

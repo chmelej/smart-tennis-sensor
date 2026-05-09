@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/sport_bg"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/navigation_relativelayout"/>
+    <ScrollView
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/imgv_train_mode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/imgv_train_mode"
+                android:scaleType="centerCrop"/>
+            <ImageView
+                android:id="@+id/imgv_track_mode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/imgv_track_mode"
+                android:scaleType="centerCrop"/>
+            <ImageView
+                android:id="@+id/imgv_video_mode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/imgv_video_train"
+                android:scaleType="centerCrop"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/navigation_relativelayout"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/advice_bgt"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp">
+        <EditText
+            android:textSize="16sp"
+            android:textColor="#aaaaaa"
+            android:textColorHint="#aaaaaa"
+            android:gravity="left"
+            android:id="@+id/advoice"
+            android:background="@null"
+            android:paddingLeft="9dp"
+            android:paddingTop="15dp"
+            android:paddingRight="9dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/activity_setting_text9_tl"/>
+    </LinearLayout>
+</LinearLayout>

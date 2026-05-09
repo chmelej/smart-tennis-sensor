@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="10sp"
+            android:textColor="@color/text_menu"
+            android:id="@+id/tv_scatter_y_des"
+            android:paddingLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/scatter_y_unit"/>
+        <TextView
+            android:textSize="10sp"
+            android:textColor="@color/text_menu"
+            android:gravity="right"
+            android:id="@+id/tv_avg_speed_ontime_hand"
+            android:paddingRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ontime_train_send_avg"/>
+    </LinearLayout>
+    <com.coollang.tennis.widget.ScatterChartView
+        android:id="@+id/scatter_chart_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

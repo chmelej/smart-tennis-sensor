@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:textSize="17sp"
+        android:textColor="@color/white_menu_bg"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="37dp"
+        android:text="@string/perfect_text2"
+        android:drawableLeft="@drawable/jiantou_perfect"
+        android:drawablePadding="8dp"/>
+    <TextView
+        android:textSize="14sp"
+        android:textColor="@color/text_menu"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/text3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/perfect_text3"/>
+</LinearLayout>

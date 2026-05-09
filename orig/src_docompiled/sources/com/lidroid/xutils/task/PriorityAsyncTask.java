@@ -1,0 +1,232 @@
+package com.lidroid.xutils.task;
+
+import android.os.Handler;
+import android.os.Looper;
+import android.os.Message;
+import android.os.Process;
+import com.lidroid.xutils.util.LogUtils;
+import java.util.concurrent.Callable;
+import java.util.concurrent.CancellationException;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Executor;
+import java.util.concurrent.FutureTask;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicBoolean;
+
+/* JADX INFO: loaded from: classes.dex */
+public abstract class PriorityAsyncTask<Params, Progress, Result> implements TaskHandler {
+    private static final int MESSAGE_POST_PROGRESS = 2;
+    private static final int MESSAGE_POST_RESULT = 1;
+    private Priority priority;
+    private static final InternalHandler sHandler = new InternalHandler(null);
+    public static final Executor sDefaultExecutor = new PriorityExecutor();
+    private volatile boolean mExecuteInvoked = false;
+    private final AtomicBoolean mCancelled = new AtomicBoolean();
+    private final AtomicBoolean mTaskInvoked = new AtomicBoolean();
+    private final WorkerRunnable<Params, Result> mWorker = new WorkerRunnable<Params, Result>() { // from class: com.lidroid.xutils.task.PriorityAsyncTask.1
+        @Override // java.util.concurrent.Callable
+        public Result call() {
+            PriorityAsyncTask.this.mTaskInvoked.set(true);
+            Process.setThreadPriority(10);
+            return (Result) PriorityAsyncTask.this.postResult(PriorityAsyncTask.this.doInBackground(this.mParams));
+        }
+    };
+    private final FutureTask<Result> mFuture = new FutureTask<Result>(this.mWorker) { // from class: com.lidroid.xutils.task.PriorityAsyncTask.2
+        @Override // java.util.concurrent.FutureTask
+        protected void done() {
+            try {
+                PriorityAsyncTask.this.postResultIfNotInvoked(get());
+            } catch (InterruptedException e) {
+                LogUtils.m8417d(e.getMessage());
+            } catch (CancellationException unused) {
+                PriorityAsyncTask.this.postResultIfNotInvoked(null);
+            } catch (ExecutionException e2) {
+                throw new RuntimeException("An error occured while executing doInBackground()", e2.getCause());
+            }
+        }
+    };
+
+    protected abstract Result doInBackground(Params... paramsArr);
+
+    @Override // com.lidroid.xutils.task.TaskHandler
+    public boolean isPaused() {
+        return false;
+    }
+
+    protected void onCancelled() {
+    }
+
+    protected void onPostExecute(Result result) {
+    }
+
+    protected void onPreExecute() {
+    }
+
+    protected void onProgressUpdate(Progress... progressArr) {
+    }
+
+    @Override // com.lidroid.xutils.task.TaskHandler
+    public void pause() {
+    }
+
+    @Override // com.lidroid.xutils.task.TaskHandler
+    public void resume() {
+    }
+
+    @Override // com.lidroid.xutils.task.TaskHandler
+    public boolean supportCancel() {
+        return true;
+    }
+
+    @Override // com.lidroid.xutils.task.TaskHandler
+    public boolean supportPause() {
+        return false;
+    }
+
+    @Override // com.lidroid.xutils.task.TaskHandler
+    public boolean supportResume() {
+        return false;
+    }
+
+    public Priority getPriority() {
+        return this.priority;
+    }
+
+    public void setPriority(Priority priority) {
+        this.priority = priority;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public void postResultIfNotInvoked(Result result) {
+        if (this.mTaskInvoked.get()) {
+            return;
+        }
+        postResult(result);
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public Result postResult(Result result) {
+        sHandler.obtainMessage(1, new AsyncTaskResult(this, result)).sendToTarget();
+        return result;
+    }
+
+    protected void onCancelled(Result result) {
+        onCancelled();
+    }
+
+    @Override // com.lidroid.xutils.task.TaskHandler
+    public final boolean isCancelled() {
+        return this.mCancelled.get();
+    }
+
+    public final boolean cancel(boolean z) {
+        this.mCancelled.set(true);
+        return this.mFuture.cancel(z);
+    }
+
+    @Override // com.lidroid.xutils.task.TaskHandler
+    public void cancel() {
+        cancel(true);
+    }
+
+    public final Result get() {
+        return this.mFuture.get();
+    }
+
+    public final Result get(long j, TimeUnit timeUnit) {
+        return this.mFuture.get(j, timeUnit);
+    }
+
+    public final PriorityAsyncTask<Params, Progress, Result> execute(Params... paramsArr) {
+        return executeOnExecutor(sDefaultExecutor, paramsArr);
+    }
+
+    public final PriorityAsyncTask<Params, Progress, Result> executeOnExecutor(Executor executor, Params... paramsArr) {
+        if (this.mExecuteInvoked) {
+            throw new IllegalStateException("Cannot execute task: the task is already executed.");
+        }
+        this.mExecuteInvoked = true;
+        onPreExecute();
+        this.mWorker.mParams = paramsArr;
+        executor.execute(new PriorityRunnable(this.priority, this.mFuture));
+        return this;
+    }
+
+    public static void execute(Runnable runnable) {
+        execute(runnable, Priority.DEFAULT);
+    }
+
+    public static void execute(Runnable runnable, Priority priority) {
+        sDefaultExecutor.execute(new PriorityRunnable(priority, runnable));
+    }
+
+    protected final void publishProgress(Progress... progressArr) {
+        if (isCancelled()) {
+            return;
+        }
+        sHandler.obtainMessage(2, new AsyncTaskResult(this, progressArr)).sendToTarget();
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public void finish(Result result) {
+        if (isCancelled()) {
+            onCancelled(result);
+        } else {
+            onPostExecute(result);
+        }
+    }
+
+    static class InternalHandler extends Handler {
+        /* synthetic */ InternalHandler(InternalHandler internalHandler) {
+            this();
+        }
+
+        private InternalHandler() {
+            super(Looper.getMainLooper());
+        }
+
+        /* JADX WARN: Type inference fix 'apply assigned field type' failed
+        java.lang.UnsupportedOperationException: ArgType.getObject(), call class: class jadx.core.dex.instructions.args.ArgType$UnknownArg
+        	at jadx.core.dex.instructions.args.ArgType.getObject(ArgType.java:593)
+        	at jadx.core.dex.attributes.nodes.ClassTypeVarsAttr.getTypeVarsMapFor(ClassTypeVarsAttr.java:35)
+        	at jadx.core.dex.nodes.utils.TypeUtils.replaceClassGenerics(TypeUtils.java:177)
+        	at jadx.core.dex.visitors.typeinference.FixTypesVisitor.insertExplicitUseCast(FixTypesVisitor.java:397)
+        	at jadx.core.dex.visitors.typeinference.FixTypesVisitor.tryFieldTypeWithNewCasts(FixTypesVisitor.java:359)
+        	at jadx.core.dex.visitors.typeinference.FixTypesVisitor.applyFieldType(FixTypesVisitor.java:309)
+        	at jadx.core.dex.visitors.typeinference.FixTypesVisitor.visit(FixTypesVisitor.java:94)
+         */
+        @Override // android.os.Handler
+        public void handleMessage(Message message) {
+            AsyncTaskResult asyncTaskResult = (AsyncTaskResult) message.obj;
+            switch (message.what) {
+                case 1:
+                    asyncTaskResult.mTask.finish(asyncTaskResult.mData[0]);
+                    break;
+                case 2:
+                    asyncTaskResult.mTask.onProgressUpdate(asyncTaskResult.mData);
+                    break;
+            }
+        }
+    }
+
+    static abstract class WorkerRunnable<Params, Result> implements Callable<Result> {
+        Params[] mParams;
+
+        private WorkerRunnable() {
+        }
+
+        /* synthetic */ WorkerRunnable(WorkerRunnable workerRunnable) {
+            this();
+        }
+    }
+
+    static class AsyncTaskResult<Data> {
+        final Data[] mData;
+        final PriorityAsyncTask mTask;
+
+        AsyncTaskResult(PriorityAsyncTask priorityAsyncTask, Data... dataArr) {
+            this.mTask = priorityAsyncTask;
+            this.mData = dataArr;
+        }
+    }
+}

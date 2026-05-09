@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="ring"
+    android:useLevel="false"
+    android:innerRadius="43dp"
+    android:thickness="3dp">
+    <padding
+        android:left="1dp"
+        android:top="1dp"
+        android:right="1dp"
+        android:bottom="1dp"/>
+    <gradient
+        android:startColor="@color/text_menu_checked"
+        android:endColor="#83f09f"
+        android:angle="90"/>
+</shape>

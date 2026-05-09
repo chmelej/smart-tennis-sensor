@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/bg_black_90"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:id="@+id/tv_load_content"
+        android:background="@drawable/updateyuanjiao"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:minHeight="60dp"
+        android:text="@string/deleting"
+        android:layout_centerInParent="true"/>
+</RelativeLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#f7f7f7"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <EditText
+        android:textSize="12dp"
+        android:id="@+id/edtext_pop"
+        android:background="@drawable/shape_edtextview"
+        android:paddingLeft="5dp"
+        android:focusable="true"
+        android:layout_width="0dp"
+        android:layout_height="31dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_weight="1"/>
+    <TextView
+        android:textSize="15sp"
+        android:textColor="@color/text_menu_checked"
+        android:layout_gravity="center"
+        android:id="@+id/post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="15dp"
+        android:layout_toRightOf="@+id/edtext_pop"/>
+</LinearLayout>

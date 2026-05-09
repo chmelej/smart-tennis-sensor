@@ -1,0 +1,38 @@
+package org.litepal.tablemanager;
+
+import android.database.sqlite.SQLiteDatabase;
+import org.litepal.exceptions.InvalidAttributesException;
+import org.litepal.parser.LitePalAttr;
+import org.litepal.parser.LitePalParser;
+
+/* JADX INFO: loaded from: classes.dex */
+public class Connector {
+    private static LitePalAttr mLitePalAttr;
+    private static LitePalOpenHelper mLitePalHelper;
+
+    public static synchronized SQLiteDatabase getWritableDatabase() {
+        return buildConnection().getWritableDatabase();
+    }
+
+    public static synchronized SQLiteDatabase getReadableDatabase() {
+        return buildConnection().getReadableDatabase();
+    }
+
+    public static SQLiteDatabase getDatabase() {
+        return getWritableDatabase();
+    }
+
+    private static LitePalOpenHelper buildConnection() {
+        if (mLitePalAttr == null) {
+            LitePalParser.parseLitePalConfiguration();
+            mLitePalAttr = LitePalAttr.getInstance();
+        }
+        if (mLitePalAttr.checkSelfValid()) {
+            if (mLitePalHelper == null) {
+                mLitePalHelper = new LitePalOpenHelper(mLitePalAttr.getDbName(), mLitePalAttr.getVersion());
+            }
+            return mLitePalHelper;
+        }
+        throw new InvalidAttributesException("Uncaught invalid attributes exception happened");
+    }
+}

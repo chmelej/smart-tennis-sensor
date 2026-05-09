@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/sport_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/item_teach_video_iv_video"
+        android:layout_width="93dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginRight="11dp"
+        android:layout_marginBottom="13dp"
+        android:scaleType="fitXY"/>
+    <TextView
+        android:textSize="17sp"
+        android:textColor="@color/text_menu"
+        android:id="@+id/item_teach_video_tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/item_teach_video_iv_video"
+        android:layout_centerVertical="true"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/ic_teach_video_arrow"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"/>
+    <View
+        android:background="@color/circle_bcg"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/item_teach_video_iv_video"/>
+</RelativeLayout>

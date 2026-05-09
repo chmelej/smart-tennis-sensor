@@ -1,0 +1,25 @@
+package p000;
+
+import android.animation.Animator;
+import android.animation.AnimatorSet;
+import android.animation.ValueAnimator;
+import java.util.List;
+
+/* JADX INFO: renamed from: w */
+/* JADX INFO: compiled from: AnimatorSetCompat.java */
+/* JADX INFO: loaded from: classes.dex */
+public class C2205w {
+    /* JADX INFO: renamed from: a */
+    public static void m12083a(AnimatorSet animatorSet, List<Animator> list) {
+        int size = list.size();
+        long jMax = 0;
+        for (int i = 0; i < size; i++) {
+            Animator animator = list.get(i);
+            jMax = Math.max(jMax, animator.getStartDelay() + animator.getDuration());
+        }
+        ValueAnimator valueAnimatorOfInt = ValueAnimator.ofInt(0, 0);
+        valueAnimatorOfInt.setDuration(jMax);
+        list.add(0, valueAnimatorOfInt);
+        animatorSet.playTogether(list);
+    }
+}

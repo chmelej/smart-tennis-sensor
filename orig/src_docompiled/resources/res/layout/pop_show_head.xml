@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/bg_black_90"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/fl_head_pop_show"
+        android:background="@drawable/shap_ring_white80"
+        android:layout_width="225dp"
+        android:layout_height="225dp"
+        android:layout_centerInParent="true">
+        <com.coollang.tennis.widget.CircleImageView
+            android:layout_gravity="center"
+            android:id="@+id/civ_head_pop_show"
+            android:layout_width="200dp"
+            android:layout_height="200dp"/>
+    </FrameLayout>
+</RelativeLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/white_menu_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textSize="17sp"
+        android:textColor="@color/text_menu"
+        android:gravity="center"
+        android:id="@+id/tv_local"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="@string/save_photo"/>
+    <View
+        android:background="@color/circle_bcg"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+    <Button
+        android:textSize="18sp"
+        android:textColor="@color/text_menu"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/btn_cancle"
+        android:background="@color/tranlete"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="@string/cancel"/>
+</LinearLayout>

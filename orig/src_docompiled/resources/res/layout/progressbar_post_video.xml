@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#bb000000"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_centerInParent="true">
+        <ProgressBar
+            android:id="@+id/video_sb"
+            android:visibility="visible"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:max="100"
+            android:progress="50"/>
+        <TextView
+            android:textSize="15sp"
+            android:textColor="@color/text_menu"
+            android:gravity="center_vertical"
+            android:id="@+id/tv_progress"
+            android:paddingTop="2dp"
+            android:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:text="@string/saving_video"
+            android:layout_toRightOf="@+id/video_sb"/>
+    </LinearLayout>
+</RelativeLayout>

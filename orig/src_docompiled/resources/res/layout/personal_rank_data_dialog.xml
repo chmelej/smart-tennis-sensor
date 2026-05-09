@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:circleImage="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_gravity="center"
+        android:background="@drawable/rankdatabg"
+        android:layout_width="264dp"
+        android:layout_height="wrap_content">
+        <com.coollang.tennis.widget.CircleImageView
+            android:id="@+id/civ_avartar"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="17dp"
+            android:src="@drawable/ic_head_nor"
+            android:layout_centerHorizontal="true"
+            circleImage:borderColor="#ff8560"
+            circleImage:borderSize="2dp"/>
+        <TextView
+            android:textSize="12sp"
+            android:textColor="@color/text_menu"
+            android:id="@+id/tv_name"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:singleLine="true"
+            android:layout_below="@+id/civ_avartar"
+            android:layout_centerHorizontal="true"/>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/tv_name"
+            android:layout_centerHorizontal="true">
+            <TextView
+                android:textSize="10sp"
+                android:textColor="@color/gray_no_device"
+                android:id="@+id/tv_place"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/place"
+                android:drawablePadding="3dp"/>
+            <CheckBox
+                android:textSize="12sp"
+                android:textColor="@color/gray_no_device"
+                android:gravity="center_vertical"
+                android:id="@+id/cb_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/like_selector"
+                android:drawablePadding="3dp"
+                android:layout_below="@+id/tv_place"/>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="14dp"
+            android:layout_below="@+id/ll"
+            android:layout_centerHorizontal="true">
+            <View style="@style/personal_rank_data_holine_style"/>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_sport"
+                    android:text="@string/app_sport"
+                    style="@style/personal_rank_data_textviewright_style"/>
+                <View style="@style/personal_rank_data_verticalline_style"/>
+                <LinearLayout style="@style/personal_rank_data_LinearLayout_style">
+                    <TextView
+                        android:id="@+id/tv_sporttime_data"
+                        style="@style/personal_rank_data_textviewdata_style"/>
+                    <TextView
+                        android:text="@string/sport_time_with_unit"
+                        style="@style/personal_rank_data_textviewdatabelow_style"/>
+                </LinearLayout>
+                <View style="@style/personal_rank_data_verticalline_style"/>
+                <LinearLayout style="@style/personal_rank_data_LinearLayout_style">
+                    <TextView
+                        android:id="@+id/tv_swing_amount"
+                        style="@style/personal_rank_data_textviewdata_style"/>
+                    <TextView
+                        android:text="@string/shot_unit"
+                        style="@style/personal_rank_data_textviewdatabelow_style"/>
+                </LinearLayout>
+            </LinearLayout>
+            <View style="@style/personal_rank_data_holine_style"/>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="@string/shot_unit"
+                    style="@style/personal_rank_data_textviewright_style"/>
+                <View style="@style/personal_rank_data_verticalline_style"/>
+                <LinearLayout style="@style/personal_rank_data_LinearLayout_style">
+                    <TextView
+                        android:id="@+id/tv_weelyranking"
+                        style="@style/personal_rank_data_textviewdata_style"/>
+                    <TextView
+                        android:text="@string/weekly_ranking"
+                        style="@style/personal_rank_data_textviewdatabelow_style"/>
+                </LinearLayout>
+                <View style="@style/personal_rank_data_verticalline_style"/>
+                <LinearLayout style="@style/personal_rank_data_LinearLayout_style">
+                    <TextView
+                        android:id="@+id/tv_monthly_ranking"
+                        style="@style/personal_rank_data_textviewdata_style"/>
+                    <TextView
+                        android:text="@string/rank_title"
+                        style="@style/personal_rank_data_textviewdatabelow_style"/>
+                </LinearLayout>
+            </LinearLayout>
+            <View style="@style/personal_rank_data_holine_style"/>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="@string/score"
+                    style="@style/personal_rank_data_textviewright_style"/>
+                <View style="@style/personal_rank_data_verticalline_style"/>
+                <LinearLayout style="@style/personal_rank_data_LinearLayout_style">
+                    <TextView
+                        android:id="@+id/tv_weely_scoreranking"
+                        style="@style/personal_rank_data_textviewdata_style"/>
+                    <TextView
+                        android:text="@string/weekly_ranking"
+                        style="@style/personal_rank_data_textviewdatabelow_style"/>
+                </LinearLayout>
+                <View style="@style/personal_rank_data_verticalline_style"/>
+                <LinearLayout style="@style/personal_rank_data_LinearLayout_style">
+                    <TextView
+                        android:id="@+id/tv_monthly_scoreranking"
+                        style="@style/personal_rank_data_textviewdata_style"/>
+                    <TextView
+                        android:text="@string/rank_title"
+                        style="@style/personal_rank_data_textviewdatabelow_style"/>
+                </LinearLayout>
+            </LinearLayout>
+            <View style="@style/personal_rank_data_holine_style"/>
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/career"
+                    android:text="@string/person_life"
+                    style="@style/personal_rank_data_textviewright_style"/>
+                <ImageView
+                    android:id="@+id/medal1"
+                    android:visibility="invisible"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+                <ImageView
+                    android:id="@+id/medal2"
+                    android:visibility="invisible"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+                <ImageView
+                    android:id="@+id/medal3"
+                    android:visibility="invisible"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

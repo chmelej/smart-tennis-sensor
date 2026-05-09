@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:background="@drawable/shap_dialog_bcg"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_centerInParent="true">
+        <TextView
+            android:gravity="center"
+            android:id="@+id/delete"
+            android:background="@drawable/shape_textview"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="30dp"
+            android:text="删除"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"/>
+        <TextView
+            android:gravity="center"
+            android:id="@+id/cancel"
+            android:background="@drawable/shape_textview"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="30dp"
+            android:text="取消"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+</RelativeLayout>

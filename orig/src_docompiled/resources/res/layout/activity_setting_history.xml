@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/sport_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/navigation_relativelayout"/>
+    <ListView
+        android:id="@+id/lv_setting_history"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:listSelector="@android:color/transparent"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"
+        android:layout_weight="1"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/ll_delete_archieve"
+        android:background="@color/white"
+        android:padding="5dp"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:enabled="true"
+            android:textSize="11sp"
+            android:textColor="@color/tack_mode_textcolor"
+            android:gravity="center_horizontal"
+            android:id="@+id/activity_track_mode_tv_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/delete"
+            android:drawableTop="@drawable/selector_track_delete"
+            android:drawablePadding="3dp"/>
+    </LinearLayout>
+</LinearLayout>

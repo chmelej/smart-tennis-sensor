@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:background="@drawable/shape_rank_self_bg"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+        <View
+            android:background="@drawable/dashline"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"/>
+        <TextView
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:ellipsize="end"
+            android:id="@+id/tv_likelist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            android:maxLines="1"/>
+        <TextView
+            android:textSize="10sp"
+            android:textColor="@color/white"
+            android:id="@+id/tv_likelist_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_below="@+id/tv_likelist"/>
+    </RelativeLayout>
+</RelativeLayout>

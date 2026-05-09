@@ -1,0 +1,115 @@
+package cn.sharesdk.framework;
+
+import android.content.Context;
+import cn.sharesdk.framework.Platform;
+import cn.sharesdk.framework.p004b.p006b.C0840f;
+import java.util.HashMap;
+
+/* JADX INFO: loaded from: classes.dex */
+public abstract class CustomPlatform extends Platform {
+    /* JADX INFO: Access modifiers changed from: protected */
+    @Override // cn.sharesdk.framework.Platform
+    public abstract boolean checkAuthorize(int i, Object obj);
+
+    /* JADX INFO: Access modifiers changed from: protected */
+    @Override // cn.sharesdk.framework.Platform
+    public void doAuthorize(String[] strArr) {
+    }
+
+    /* JADX INFO: Access modifiers changed from: protected */
+    @Override // cn.sharesdk.framework.Platform
+    public void doCustomerProtocol(String str, String str2, int i, HashMap<String, Object> map, HashMap<String, String> map2) {
+    }
+
+    /* JADX INFO: Access modifiers changed from: protected */
+    @Override // cn.sharesdk.framework.Platform
+    public void doShare(Platform.ShareParams shareParams) {
+    }
+
+    /* JADX INFO: Access modifiers changed from: protected */
+    @Override // cn.sharesdk.framework.Platform
+    public HashMap<String, Object> filterFriendshipInfo(int i, HashMap<String, Object> map) {
+        return null;
+    }
+
+    /* JADX INFO: Access modifiers changed from: protected */
+    @Override // cn.sharesdk.framework.Platform
+    public final C0840f.a filterShareContent(Platform.ShareParams shareParams, HashMap<String, Object> map) {
+        return null;
+    }
+
+    /* JADX INFO: Access modifiers changed from: protected */
+    @Override // cn.sharesdk.framework.Platform
+    public void follow(String str) {
+    }
+
+    /* JADX INFO: Access modifiers changed from: protected */
+    @Override // cn.sharesdk.framework.Platform
+    public HashMap<String, Object> getBilaterals(int i, int i2, String str) {
+        return null;
+    }
+
+    protected int getCustomPlatformId() {
+        return 1;
+    }
+
+    /* JADX INFO: Access modifiers changed from: protected */
+    @Override // cn.sharesdk.framework.Platform
+    public HashMap<String, Object> getFollowers(int i, int i2, String str) {
+        return null;
+    }
+
+    /* JADX INFO: Access modifiers changed from: protected */
+    @Override // cn.sharesdk.framework.Platform
+    public HashMap<String, Object> getFollowings(int i, int i2, String str) {
+        return null;
+    }
+
+    /* JADX INFO: Access modifiers changed from: protected */
+    @Override // cn.sharesdk.framework.Platform
+    public void getFriendList(int i, int i2, String str) {
+    }
+
+    @Override // cn.sharesdk.framework.Platform
+    public abstract String getName();
+
+    @Override // cn.sharesdk.framework.Platform
+    public int getVersion() {
+        return 0;
+    }
+
+    @Override // cn.sharesdk.framework.Platform
+    public boolean hasShareCallback() {
+        return false;
+    }
+
+    /* JADX INFO: Access modifiers changed from: protected */
+    @Override // cn.sharesdk.framework.Platform
+    public final void initDevInfo(String str) {
+    }
+
+    /* JADX INFO: Access modifiers changed from: protected */
+    @Override // cn.sharesdk.framework.Platform
+    public final void setNetworkDevinfo() {
+    }
+
+    /* JADX INFO: Access modifiers changed from: protected */
+    @Override // cn.sharesdk.framework.Platform
+    public void timeline(int i, int i2, String str) {
+    }
+
+    /* JADX INFO: Access modifiers changed from: protected */
+    @Override // cn.sharesdk.framework.Platform
+    public void userInfor(String str) {
+    }
+
+    public CustomPlatform(Context context) {
+        super(context);
+    }
+
+    /* JADX INFO: Access modifiers changed from: protected */
+    @Override // cn.sharesdk.framework.Platform
+    public final int getPlatformId() {
+        return -Math.abs(getCustomPlatformId());
+    }
+}
